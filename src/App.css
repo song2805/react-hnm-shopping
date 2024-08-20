@@ -1,0 +1,89 @@
+.login-button {
+  display: flex;
+  justify-content: flex-end;
+  margin:20px;
+  cursor: pointer;
+}
+
+.login-title {
+  padding-left: 10px;
+}
+
+.nav-logo-section {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-list li {
+  padding: 10px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+
+  /* display: grid;
+    grid-template-columns: 10fr 1fr;
+    align-items: end;
+    position: relative;
+    right: 50%;
+    transform: translateX(62.8%);
+    min-height: 33px;
+    z-index: 1003; */
+}
+
+.search-area {
+  border-bottom: 2px solid grey;
+  padding: 5px;
+  position: absolute;
+  right: 20px;
+}
+ 
+
+
+.search-area input {
+  
+  border: none;
+  
+}
+
+/* Product card CSS*/
+.product-card{
+  margin-bottom: 25px;
+  background-color: white;
+  transition: all 0.3s ease;
+  width: 270px;
+}
+
+.item-images {
+  width: 270px;
+  }
+
+.product-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.product-card div {
+ padding-left: 10px;
+}
+
+/* Login container */
+.main-container{
+  display: flex;
+  justify-content: center;
+  top: 150px;
+  padding: 0 100px 0;
+ 
+
+}
+.login-container {
+  margin-top: 100px;
+  width: 500px;
+  height: 500px;
+  
+}
