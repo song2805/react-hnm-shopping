@@ -31,7 +31,7 @@ const Navbar = () => {
 
             </div>
             <div className="nav-logo-section">
-               <a href="./"><img width={100} src="https://1000logos.net/wp-content/uploads/2017/02/HM-Logo.png" /></a> 
+               <img width={100} src="https://1000logos.net/wp-content/uploads/2017/02/HM-Logo.png" />
             </div>
             <div className='menu-container'>
                 
