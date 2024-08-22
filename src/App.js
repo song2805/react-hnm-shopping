@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,15 +27,13 @@ function App() {
 // true is logged in, false is logged out
 // authenticate 값을 바꿔주는 함수는 setAuthenticate 이다. 그럼 어떻게 true or false로 바꿔 줄 수 있을까?
 // props로 배내버리면 됨!    <Route path="/login" element={<Login setAuthenticate={setAuthenticate}/>} /> 함수도 props로 보낼수 있답니다.
-// useEffect(()=> {
-//   console.log("AAA", authenticate);
-// },[authenticate]);
+
 
 const[authenticate, setAuthenticate]=useState(false) ;
 
-useEffect(()=> {
-  console.log("aaa", authenticate)
-},[authenticate])
+// useEffect(()=> {
+//   console.log("aaa", authenticate)
+// },[authenticate])
 
   return (
 

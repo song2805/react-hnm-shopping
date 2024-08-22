@@ -5,15 +5,16 @@ import { useSearchParams } from 'react-router-dom';
 
 const ProductAll = () => {
   const [productList, setProductList] = useState([])
-  const [query, setQuery] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [error,setError]=useState("")
 
   const getProducts = async () => {
-    let keyword = query.get("q") || "";
-    // console.log("query 값은?",searchQuery);
-    let url = `http://localhost:4000/products?q=${keyword}`;
+    
 
     try {
+    let keyword = searchParams.get("q") || "";
+    console.log("searchParams 값은?",keyword);
+    let url = `https://my-json-server.typicode.com/song2805/react-hnm-shopping/products?q=${keyword}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);
@@ -23,10 +24,12 @@ const ProductAll = () => {
     }
   };
   //API 호출은 useEffect에서 해줘요. useEffect는 2개의 parameters에서 가져갑니다. 첫째는 function, 두번째는 Array를 매개변수로 넣습니다.
+  //getProducts()란 함수로 api 호출해 줄께요
   useEffect(() => {
-    //getProducts()란 함수로 api 호출해 줄께요
+    console.log("search",searchParams)
+    console.log("get-q",searchParams.get("q"))
     getProducts();
-  }, [query]);
+  }, [searchParams]);
 
 
   return (
