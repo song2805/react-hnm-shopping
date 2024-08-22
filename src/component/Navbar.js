@@ -75,7 +75,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
             </div>
             <div className="nav-logo-section">
                 <Link to="/">
-                    <img width={100} src="https://1000logos.net/wp-content/uploads/2017/02/HM-Logo.png" />
+                    <img width={100} alt="" src="https://1000logos.net/wp-content/uploads/2017/02/HM-Logo.png" />
                 </Link>
             </div>
             <div className='menu-container'>
