@@ -25,16 +25,7 @@
 
 .menu-container {
   display: flex;
-  justify-content: center;
-
-  /* display: grid;
-    grid-template-columns: 10fr 1fr;
-    align-items: end;
-    position: relative;
-    right: 50%;
-    transform: translateX(62.8%);
-    min-height: 33px;
-    z-index: 1003; */
+  justify-content: center;  
 }
 
 .search-area {
@@ -53,6 +44,10 @@
 }
 
 /* Product card CSS*/
+.card-container {
+  display: flex;
+  justify-content: center;
+}
 .product-card{
   margin-bottom: 25px;
   background-color: white;
@@ -87,3 +82,204 @@
   height: 500px;
   
 }
+
+
+/* ProductDetail.js */
+.info {
+ margin-bottom: 15px;
+}
+.info-drop {
+  margin-bottom: 25px;
+}
+.info-add {
+  width: 100%;
+}
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-img img{
+  width: 25rem;
+}
+
+/*  */
+.nav-header{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  
+}
+
+.nav-header * {
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.menu{
+  display: flex;
+  list-style-type: none;
+  padding: 20px;
+}
+.menu li a{
+  text-decoration: none;
+  color:black;
+  margin-left:20px;
+}
+
+.nav-logo{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.nav-menu-area{
+  display: flex;
+  justify-content: center;
+}
+.burger-menu{
+  margin-left: 20px;
+}
+
+
+.search-box{
+  border-bottom: 1px solid black;
+  position: absolute;
+  right: 20px;
+  padding: 5px;
+}
+.search-box input{
+  border:none;
+  margin-left:5px;
+}
+.search-box input:focus {
+  outline:none
+}
+
+.card{
+  border:none !important;
+  margin-bottom: 10px;
+}
+
+.choice{
+  font-size:11px;
+  color: #63786a;
+  font-weight: bold;
+  height: 20px;
+}
+
+.new-product {
+  font-size: 11px;
+  height: 20px;
+}
+.login-form{
+  width:40em;
+}
+.login-area{
+  display: flex;
+  justify-content: center;
+}
+
+.form-control:valid {
+  background-color:  white !important;
+}
+
+.product-detail-img{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-detail-img img{
+  width: 100%;
+}
+.product-info{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/*  */
+
+.drop-down{
+  margin-top:20px;
+}
+
+.add-button{
+  margin-top:20px;
+  width: 100%;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  z-index: 1;
+}
+.hide{
+  visibility:hidden
+}
+
+/* menu */
+
+@media screen and (max-width: 992px) {
+  .nav-logo-section {
+    margin-bottom: 50px;
+  }
+  .hide {
+    visibility:visible;
+  }
+  .menu-list {
+    display: none;
+  }
+  .search-area{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .product-img img{
+    margin-bottom: 30px;
+  }
+
+  .info, .info-drop {
+    text-align: center;
+
+  }
+}
+
+.side-menu {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: hsl(49, 11%, 69%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index:2
+}
+.side-menu-list button {
+  margin: 5px;
+  border: none;
+  background: none;
+  width: 120px;
+}
+
+.side-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 35px;
+  margin-left: 50px;
+  border: none;
+  background: none;
+}
+
+.side-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-menu-list button:hover {
+  background-color: beige;
+  border-radius: 3px;
+}  

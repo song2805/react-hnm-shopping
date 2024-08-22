@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import {Container} from 'react-bootstrap'
 
 const ProductCard = ({ item }) => {
     const navigate =useNavigate()
@@ -7,13 +8,16 @@ const ProductCard = ({ item }) => {
         navigate(`product/${item.id}`)
     }
     return (
-        <div className="product-card" onClick={showDetail}>
+        <Container className='card-container'>
+             <div className="product-card" onClick={showDetail}>
             <img className="item-images" src={item?.img} />
-            <div>{item.choice == true ? "Conscious choice" : ""}</div>
+            <div>{item?.choice ? "Conscious choice" : ""}</div>
             <div>{item?.title}</div>
             <div>${item?.price}</div>
-            <div>{item.new === true ? "New" : ""}</div>
+            <div>{item.new ? "New" : ""}</div>
         </div>
+        </Container>
+       
     )
 }
 
