@@ -100,7 +100,7 @@
 }
 
 .product-img img{
-  width: 25rem;
+  width: 22rem;
 }
 
 /*  */
@@ -230,6 +230,9 @@
   .search-area{
     display: none;
   }
+  .info-add {
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -239,7 +242,15 @@
 
   .info, .info-drop {
     text-align: center;
+  }
 
+  .product-img {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product-img img{
+    width: 270px;
   }
 }
 
