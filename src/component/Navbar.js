@@ -39,41 +39,43 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     }
 
     return (
-        <div>
-            <div className="side-menu" style={{ width: width }}>
-                <button className="closebtn" onClick={() => setWidth(0)}>
-                    &times;
-                </button>
-                <div className="side-menu-list" id="menu-list">
-                    {menuList.map((menu, index) => (
-                        <button key={index}>{menu}</button>
-                    ))}
+        <div className='nav-main'>
+            <div className="menu-login">
+                <div className="side-menu" style={{ width: width }}>
+                    <button className="closebtn" onClick={() => setWidth(0)}>
+                        &times;
+                    </button>
+                    <div className="side-menu-list" id="menu-list">
+                        {menuList.map((menu, index) => (
+                            <button key={index}>{menu}</button>
+                        ))}
+                    </div>
+                </div>
+                <div className="nav-header">
+                    <div className="burger-menu hide">
+                        <FontAwesomeIcon icon={faBars} onClick={() => setWidth(230)} />
+                    </div>
+                </div>
+
+                <div className="login-box">
+                    {authenticate ? (
+                        <div className="login-button" onClick={() => setAuthenticate(false)}>
+                            <FontAwesomeIcon icon={faUser} />
+                            <div className="login-title">logout</div>
+                        </div>
+
+                    ) : (
+                        <div className="login-button" onClick={() => goToLogin()}>
+                            <FontAwesomeIcon icon={faUser} />
+                            <div className="login-title">login</div>
+                        </div>
+
+                    )}
                 </div>
             </div>
-            <div className="nav-header">
-                <div className="burger-menu hide">
-                    <FontAwesomeIcon icon={faBars} onClick={() => setWidth(230)} />
-                </div>
-            </div>
-
-            <div>
-                {authenticate ? (
-                    <div className="login-button" onClick={() => setAuthenticate(false)}>
-                        <FontAwesomeIcon icon={faUser} />
-                        <div className="login-title">logout</div>
-                    </div>
-
-                ) : (
-                    <div className="login-button" onClick={() => goToLogin()}>
-                        <FontAwesomeIcon icon={faUser} />
-                        <div className="login-title">login</div>
-                    </div>
-
-                )}
 
 
-            </div>
-            <div className="nav-logo-section">
+            <div className="nav-logo">
                 <Link to="/">
                     <img width={100} alt="" src="https://1000logos.net/wp-content/uploads/2017/02/HM-Logo.png" />
                 </Link>
