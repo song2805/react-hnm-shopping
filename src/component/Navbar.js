@@ -52,7 +52,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
             </div>
             <div className="nav-header">
                 <div className="burger-menu hide">
-                    <FontAwesomeIcon icon={faBars} onClick={() => setWidth(320)} />
+                    <FontAwesomeIcon icon={faBars} onClick={() => setWidth(230)} />
                 </div>
             </div>
 

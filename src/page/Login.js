@@ -9,9 +9,15 @@ const Login = ({ setAuthenticate }) => {
   const loginUser = (event) => {
     event.preventDefault();
     console.log("login user function issue")
-    setAuthenticate(true);
-    console.log(setAuthenticate)
-    navigate("/");
+    if(event.target[0].value === "coding@noona.com" && event.target[1].value === "1004") {
+      setAuthenticate(true);
+      console.log(setAuthenticate)
+      navigate("/");
+    } else {
+      alert("This ID does not exist or the password is incorrect")
+      setAuthenticate(false)
+    }
+    
   }
   return (
     <Container className="main-container">
