@@ -52,11 +52,13 @@
   margin-bottom: 25px;
   background-color: white;
   transition: all 0.3s ease;
-  width: 270px;
+  width: 100%;
+  height: 100%;
 }
 
 .item-images {
-  width: 270px;
+  width: 100%;
+  height: 100%;
   }
 
 .product-card:hover {
@@ -252,6 +254,17 @@
   .product-img img{
     width: 270px;
   }
+
+
+  .product-card{
+    width: 50vw;
+    
+  }
+  
+  .item-images {
+    width: 50vw;
+
+    }
 }
 
 .side-menu {
@@ -265,7 +278,7 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  z-index:2
+  z-index: 2;
 }
 .side-menu-list button {
   margin: 5px;
